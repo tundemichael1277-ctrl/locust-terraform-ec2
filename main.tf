@@ -6,5 +6,6 @@ resource "aws_instance" "locust_app" {
     tags = {
       Name = "locust-app"
     }
+    user_data = file("userdata.sh")
  
 }
