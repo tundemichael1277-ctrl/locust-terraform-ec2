@@ -6,6 +6,12 @@ terraform {
         version = "~>6.0"
     }
   }
+  backend "s3" {
+    bucket = "locust-terraform-state1"
+    region = "eu-west-2"
+    key = "locust-terraform.tfstate"
+    
+  }
 }
 
 provider "aws" {
